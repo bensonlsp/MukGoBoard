@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94332EF41CE74488002550F4 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94332EF31CE74488002550F4 /* GameBoard.swift */; };
+		94332EF61CE7449A002550F4 /* GameBoard.sks in Resources */ = {isa = PBXBuildFile; fileRef = 94332EF51CE7449A002550F4 /* GameBoard.sks */; };
+		94332EF81CE76F69002550F4 /* StoneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94332EF71CE76F69002550F4 /* StoneNode.swift */; };
+		94332EFA1CE76F87002550F4 /* BoardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94332EF91CE76F87002550F4 /* BoardNode.swift */; };
+		94332F0A1CF0742C002550F4 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94332F091CF0742B002550F4 /* Util.swift */; };
+		94EC05B61CDA4C7200EFBDFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC05B51CDA4C7200EFBDFE /* AppDelegate.swift */; };
+		94EC05BC1CDA4C7200EFBDFE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC05BB1CDA4C7200EFBDFE /* GameViewController.swift */; };
+		94EC05BF1CDA4C7200EFBDFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EC05BD1CDA4C7200EFBDFE /* Main.storyboard */; };
+		94EC05C11CDA4C7200EFBDFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94EC05C01CDA4C7200EFBDFE /* Assets.xcassets */; };
+		94EC05C41CDA4C7200EFBDFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EC05C21CDA4C7200EFBDFE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		94332EF31CE74488002550F4 /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		94332EF51CE7449A002550F4 /* GameBoard.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameBoard.sks; sourceTree = "<group>"; };
+		94332EF71CE76F69002550F4 /* StoneNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoneNode.swift; sourceTree = "<group>"; };
+		94332EF91CE76F87002550F4 /* BoardNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardNode.swift; sourceTree = "<group>"; };
+		94332F091CF0742B002550F4 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		94EC05B21CDA4C7100EFBDFE /* MukGoBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MukGoBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94EC05B51CDA4C7200EFBDFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94EC05BB1CDA4C7200EFBDFE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		94EC05BE1CDA4C7200EFBDFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94EC05C01CDA4C7200EFBDFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94EC05C31CDA4C7200EFBDFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		94EC05C51CDA4C7200EFBDFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94EC05AF1CDA4C7100EFBDFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94EC05A91CDA4C7100EFBDFE = {
+			isa = PBXGroup;
+			children = (
+				94EC05B41CDA4C7100EFBDFE /* MukGoBoard */,
+				94EC05B31CDA4C7100EFBDFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94EC05B31CDA4C7100EFBDFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94EC05B21CDA4C7100EFBDFE /* MukGoBoard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94EC05B41CDA4C7100EFBDFE /* MukGoBoard */ = {
+			isa = PBXGroup;
+			children = (
+				94EC05B51CDA4C7200EFBDFE /* AppDelegate.swift */,
+				94332EF51CE7449A002550F4 /* GameBoard.sks */,
+				94332EF31CE74488002550F4 /* GameBoard.swift */,
+				94332EF91CE76F87002550F4 /* BoardNode.swift */,
+				94332EF71CE76F69002550F4 /* StoneNode.swift */,
+				94332F091CF0742B002550F4 /* Util.swift */,
+				94EC05BB1CDA4C7200EFBDFE /* GameViewController.swift */,
+				94EC05BD1CDA4C7200EFBDFE /* Main.storyboard */,
+				94EC05C01CDA4C7200EFBDFE /* Assets.xcassets */,
+				94EC05C21CDA4C7200EFBDFE /* LaunchScreen.storyboard */,
+				94EC05C51CDA4C7200EFBDFE /* Info.plist */,
+			);
+			path = MukGoBoard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94EC05B11CDA4C7100EFBDFE /* MukGoBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94EC05C81CDA4C7200EFBDFE /* Build configuration list for PBXNativeTarget "MukGoBoard" */;
+			buildPhases = (
+				94EC05AE1CDA4C7100EFBDFE /* Sources */,
+				94EC05AF1CDA4C7100EFBDFE /* Frameworks */,
+				94EC05B01CDA4C7100EFBDFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MukGoBoard;
+			productName = MukGoBoard;
+			productReference = 94EC05B21CDA4C7100EFBDFE /* MukGoBoard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94EC05AA1CDA4C7100EFBDFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = imukmuk;
+				TargetAttributes = {
+					94EC05B11CDA4C7100EFBDFE = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 94EC05AD1CDA4C7100EFBDFE /* Build configuration list for PBXProject "MukGoBoard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94EC05A91CDA4C7100EFBDFE;
+			productRefGroup = 94EC05B31CDA4C7100EFBDFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94EC05B11CDA4C7100EFBDFE /* MukGoBoard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94EC05B01CDA4C7100EFBDFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94332EF61CE7449A002550F4 /* GameBoard.sks in Resources */,
+				94EC05C41CDA4C7200EFBDFE /* LaunchScreen.storyboard in Resources */,
+				94EC05C11CDA4C7200EFBDFE /* Assets.xcassets in Resources */,
+				94EC05BF1CDA4C7200EFBDFE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94EC05AE1CDA4C7100EFBDFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94332EF41CE74488002550F4 /* GameBoard.swift in Sources */,
+				94332F0A1CF0742C002550F4 /* Util.swift in Sources */,
+				94332EFA1CE76F87002550F4 /* BoardNode.swift in Sources */,
+				94EC05BC1CDA4C7200EFBDFE /* GameViewController.swift in Sources */,
+				94332EF81CE76F69002550F4 /* StoneNode.swift in Sources */,
+				94EC05B61CDA4C7200EFBDFE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		94EC05BD1CDA4C7200EFBDFE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94EC05BE1CDA4C7200EFBDFE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		94EC05C21CDA4C7200EFBDFE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94EC05C31CDA4C7200EFBDFE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94EC05C61CDA4C7200EFBDFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		94EC05C71CDA4C7200EFBDFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94EC05C91CDA4C7200EFBDFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MukGoBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imukmuk.MukGoBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		94EC05CA1CDA4C7200EFBDFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MukGoBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imukmuk.MukGoBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94EC05AD1CDA4C7100EFBDFE /* Build configuration list for PBXProject "MukGoBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94EC05C61CDA4C7200EFBDFE /* Debug */,
+				94EC05C71CDA4C7200EFBDFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94EC05C81CDA4C7200EFBDFE /* Build configuration list for PBXNativeTarget "MukGoBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94EC05C91CDA4C7200EFBDFE /* Debug */,
+				94EC05CA1CDA4C7200EFBDFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94EC05AA1CDA4C7100EFBDFE /* Project object */;
+}

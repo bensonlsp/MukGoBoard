@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="MukGoBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WeiQi Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGT-dd-Fmx">
+                                <rect key="frame" x="123" y="67" width="129" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="T1t-Td-Ssf"/>
+                                    <constraint firstAttribute="width" constant="129" id="gAU-hu-iyb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ta0-hC-DZG" customClass="SKView">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.68235294117647061" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ta0-hC-DZG" secondAttribute="height" multiplier="1:1" id="3q0-kG-hA0"/>
+                                    <constraint firstAttribute="width" secondItem="Ta0-hC-DZG" secondAttribute="height" multiplier="1:1" id="Mo5-eZ-T16"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3q0-kG-hA0"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aGT-dd-Fmx" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="FtB-Qi-RAb"/>
+                            <constraint firstItem="Ta0-hC-DZG" firstAttribute="top" secondItem="aGT-dd-Fmx" secondAttribute="bottom" constant="50" id="Y47-KC-AAJ"/>
+                            <constraint firstItem="Ta0-hC-DZG" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="iNj-cq-fGr"/>
+                            <constraint firstItem="Ta0-hC-DZG" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="oW9-ob-uwh"/>
+                            <constraint firstAttribute="trailing" secondItem="Ta0-hC-DZG" secondAttribute="trailing" id="pVI-A3-786"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="gameBoard" destination="Ta0-hC-DZG" id="7hm-l5-MZA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="249"/>
+        </scene>
+    </scenes>
+</document>
