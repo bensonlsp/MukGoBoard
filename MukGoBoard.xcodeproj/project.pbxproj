@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		94332EF41CE74488002550F4 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94332EF31CE74488002550F4 /* GameBoard.swift */; };
-		94332EF61CE7449A002550F4 /* GameBoard.sks in Resources */ = {isa = PBXBuildFile; fileRef = 94332EF51CE7449A002550F4 /* GameBoard.sks */; };
+		94332EF41CE74488002550F4 /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94332EF31CE74488002550F4 /* GameBoardView.swift */; };
+		94332EF61CE7449A002550F4 /* GameBoardView.sks in Resources */ = {isa = PBXBuildFile; fileRef = 94332EF51CE7449A002550F4 /* GameBoardView.sks */; };
 		94332EF81CE76F69002550F4 /* StoneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94332EF71CE76F69002550F4 /* StoneNode.swift */; };
 		94332EFA1CE76F87002550F4 /* BoardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94332EF91CE76F87002550F4 /* BoardNode.swift */; };
 		94332F0A1CF0742C002550F4 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94332F091CF0742B002550F4 /* Util.swift */; };
@@ -20,8 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		94332EF31CE74488002550F4 /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
-		94332EF51CE7449A002550F4 /* GameBoard.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameBoard.sks; sourceTree = "<group>"; };
+		94332EF31CE74488002550F4 /* GameBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
+		94332EF51CE7449A002550F4 /* GameBoardView.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameBoardView.sks; sourceTree = "<group>"; };
 		94332EF71CE76F69002550F4 /* StoneNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoneNode.swift; sourceTree = "<group>"; };
 		94332EF91CE76F87002550F4 /* BoardNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardNode.swift; sourceTree = "<group>"; };
 		94332F091CF0742B002550F4 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
@@ -65,12 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				94EC05B51CDA4C7200EFBDFE /* AppDelegate.swift */,
-				94332EF51CE7449A002550F4 /* GameBoard.sks */,
-				94332EF31CE74488002550F4 /* GameBoard.swift */,
+				94EC05BB1CDA4C7200EFBDFE /* GameViewController.swift */,
+				94332EF51CE7449A002550F4 /* GameBoardView.sks */,
+				94332EF31CE74488002550F4 /* GameBoardView.swift */,
 				94332EF91CE76F87002550F4 /* BoardNode.swift */,
 				94332EF71CE76F69002550F4 /* StoneNode.swift */,
 				94332F091CF0742B002550F4 /* Util.swift */,
-				94EC05BB1CDA4C7200EFBDFE /* GameViewController.swift */,
 				94EC05BD1CDA4C7200EFBDFE /* Main.storyboard */,
 				94EC05C01CDA4C7200EFBDFE /* Assets.xcassets */,
 				94EC05C21CDA4C7200EFBDFE /* LaunchScreen.storyboard */,
@@ -137,7 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94332EF61CE7449A002550F4 /* GameBoard.sks in Resources */,
+				94332EF61CE7449A002550F4 /* GameBoardView.sks in Resources */,
 				94EC05C41CDA4C7200EFBDFE /* LaunchScreen.storyboard in Resources */,
 				94EC05C11CDA4C7200EFBDFE /* Assets.xcassets in Resources */,
 				94EC05BF1CDA4C7200EFBDFE /* Main.storyboard in Resources */,
@@ -151,7 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94332EF41CE74488002550F4 /* GameBoard.swift in Sources */,
+				94332EF41CE74488002550F4 /* GameBoardView.swift in Sources */,
 				94332F0A1CF0742C002550F4 /* Util.swift in Sources */,
 				94332EFA1CE76F87002550F4 /* BoardNode.swift in Sources */,
 				94EC05BC1CDA4C7200EFBDFE /* GameViewController.swift in Sources */,

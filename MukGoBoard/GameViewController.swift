@@ -16,7 +16,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let scene = GameBoard(fileNamed:"GameBoard") {
+        if let scene = GameBoardView(fileNamed:"GameBoardView") {
             // Configure the view.
             let skView = gameBoard as! SKView
             skView.showsFPS = true
@@ -53,4 +53,11 @@ class GameViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    
+    @IBAction func restartGame(sender: AnyObject) {
+        
+        
+    }
+    
 }
