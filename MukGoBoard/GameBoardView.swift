@@ -14,7 +14,8 @@ class GameBoardView: SKScene {
         /* Setup your scene here */
         self.backgroundColor = SKColor(red: 241/255, green: 174/255, blue: 69/255, alpha: 1.0)
         
-        let board = BoardNode.boardAtPosition(CGPointMake(0,0), size: self.frame.size)
+        // let board = BoardNode.boardAtPosition(CGPointMake(0,0), size: self.frame.size)
+        let board = BoardNode(position: CGPointMake(0, 0), size: self.frame.size)
         self.addChild(board)
     }
     
