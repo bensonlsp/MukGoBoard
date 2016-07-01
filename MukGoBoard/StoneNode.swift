@@ -17,7 +17,6 @@ class WhiteStoneNode: SKSpriteNode {
         whiteStone.anchorPoint = CGPointMake(0.5, 0.5)
         whiteStone.position = position
         whiteStone.name = "whiteStone"
-        whiteStone.zPosition = 3
         
         return whiteStone
     }
@@ -30,7 +29,6 @@ class BlackStoneNode: SKSpriteNode {
         blackStone.anchorPoint = CGPointMake(0.5, 0.5)
         blackStone.position = position
         blackStone.name = "blackStone"
-        blackStone.zPosition = 3
         
         return blackStone
     }

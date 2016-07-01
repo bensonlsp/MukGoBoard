@@ -12,25 +12,20 @@ import SpriteKit
 class GameViewController: UIViewController {
 
     @IBOutlet weak var gameBoard: UIView!
+    var skView: SKView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let scene = GameBoardView(fileNamed:"GameBoardView") {
-            // Configure the view.
-            let skView = gameBoard as! SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            /* Set the scale mode to scale to fit the window */
-            scene.size = skView.bounds.size
-            scene.scaleMode = .AspectFill
-            
-            skView.presentScene(scene)
-        }
+        // Configure the view.
+        skView = gameBoard as! SKView
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        // Sprite Kit applies additional optimizations to improve rendering performance
+        skView.ignoresSiblingOrder = true
+        
+        // Present a game board to skView
+        presentGameBoard(skView)
     }
 
     override func shouldAutorotate() -> Bool {
@@ -56,8 +51,20 @@ class GameViewController: UIViewController {
     
     
     @IBAction func restartGame(sender: AnyObject) {
-        
-        
+        for node:SKNode in skView.scene!.children {
+            node.removeFromParent()
+        }
+        presentGameBoard(skView)
     }
     
+    
+    func presentGameBoard(view: SKView) {
+        if let scene = GameBoardView(fileNamed:"GameBoardView") {
+            /* Set the scale mode to scale to fit the window */
+            scene.size = view.bounds.size
+            scene.scaleMode = .AspectFill
+            
+            view.presentScene(scene)
+        }
+    }
 }
