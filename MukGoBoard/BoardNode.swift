@@ -88,13 +88,15 @@ class BoardNode: SKSpriteNode {
         
         switch stoneColor {
             case .Black:
-                let stone = BlackStoneNode.blackStoneAtPosition(location)
+                // let stone = BlackStoneNode.blackStoneAtPosition(location)
+                let stone = StoneNode(stoneColor: .Black, position: location)
                 stone.size = CGSize(width: self.frame.height/20, height: self.frame.width/20)
                 stone.zPosition = 4
                 self.addChild(stone)
                 stoneColor = .White
             case .White:
-                let stone = WhiteStoneNode.whiteStoneAtPosition(location)
+                // let stone = WhiteStoneNode.whiteStoneAtPosition(location)
+                let stone = StoneNode(stoneColor: .White, position: location)
                 stone.size = CGSize(width: self.frame.height/20, height: self.frame.width/20)
                 stone.zPosition = 5
                 self.addChild(stone)
