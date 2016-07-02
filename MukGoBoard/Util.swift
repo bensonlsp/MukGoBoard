@@ -14,3 +14,5 @@ enum StoneColor {
 }
 
 var stoneColor: StoneColor = .Black
+
+let kifu = Kifu()

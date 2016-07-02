@@ -26,6 +26,7 @@ class GameBoardView: SKScene {
             let location = touch.locationInNode(self)
             let board = self.childNodeWithName("board") as! BoardNode
             board.addStone(location)
+            kifu.printKifu()
         }
     }
     

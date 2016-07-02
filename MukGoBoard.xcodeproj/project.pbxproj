@@ -17,7 +17,7 @@
 		94EC05BF1CDA4C7200EFBDFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EC05BD1CDA4C7200EFBDFE /* Main.storyboard */; };
 		94EC05C11CDA4C7200EFBDFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94EC05C01CDA4C7200EFBDFE /* Assets.xcassets */; };
 		94EC05C41CDA4C7200EFBDFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EC05C21CDA4C7200EFBDFE /* LaunchScreen.storyboard */; };
-		F4E9592A1D2641CC005449CA /* board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E959291D2641CC005449CA /* board.swift */; };
+		F4E9592A1D2641CC005449CA /* Kifu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E959291D2641CC005449CA /* Kifu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		94EC05C01CDA4C7200EFBDFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94EC05C31CDA4C7200EFBDFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94EC05C51CDA4C7200EFBDFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4E959291D2641CC005449CA /* board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = board.swift; sourceTree = "<group>"; };
+		F4E959291D2641CC005449CA /* Kifu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kifu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 				94332EF31CE74488002550F4 /* GameBoardView.swift */,
 				94332EF91CE76F87002550F4 /* BoardNode.swift */,
 				94332EF71CE76F69002550F4 /* StoneNode.swift */,
-				F4E959291D2641CC005449CA /* board.swift */,
+				F4E959291D2641CC005449CA /* Kifu.swift */,
 				94332F091CF0742B002550F4 /* Util.swift */,
 				94EC05BD1CDA4C7200EFBDFE /* Main.storyboard */,
 				94EC05C01CDA4C7200EFBDFE /* Assets.xcassets */,
@@ -155,7 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4E9592A1D2641CC005449CA /* board.swift in Sources */,
+				F4E9592A1D2641CC005449CA /* Kifu.swift in Sources */,
 				94332EF41CE74488002550F4 /* GameBoardView.swift in Sources */,
 				94332F0A1CF0742C002550F4 /* Util.swift in Sources */,
 				94332EFA1CE76F87002550F4 /* BoardNode.swift in Sources */,

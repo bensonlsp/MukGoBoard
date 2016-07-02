@@ -29,6 +29,7 @@ class StoneNode: SKSpriteNode {
     }
 }
 
+/*
 class WhiteStoneNode: SKSpriteNode {
     class func whiteStoneAtPosition(position: CGPoint) -> SKSpriteNode {
         let stoneImageName = "white"
@@ -52,3 +53,4 @@ class BlackStoneNode: SKSpriteNode {
         return blackStone
     }
 }
+ */
