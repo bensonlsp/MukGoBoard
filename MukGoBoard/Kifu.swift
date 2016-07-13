@@ -31,9 +31,24 @@ class Kifu {
         for _ in 1...19 {
             for _ in 1...19 {
                 self.map.append(Point(x: x, y: y, order: 0, mark: .Empty))
-                x = x + 1
+                x += 1
             }
-            y = y - 1
+            y -= 1
+            x = 1
+        }
+    }
+    
+    func resetKifu() {
+        var y = 19
+        var x = 1
+        var count = 0
+        for _ in 1...19 {
+            for _ in 1...19 {
+                self.map[count] = Point(x: x, y: y, order: 0, mark: .Empty)
+                x += 1
+                count += 1
+            }
+            y -= 1
             x = 1
         }
     }
@@ -46,6 +61,16 @@ class Kifu {
         }
     }
     
+    func returnMark(x x: Int, y: Int) -> Mark {
+        for count in 0..<map.count {
+            if (x == map[count].x && y == map[count].y) {
+                return map[count].mark
+            }
+        }
+        
+        return Mark.Empty
+    }
+    
     func printKifu() {
         var count = 0
         var boardTXT: String = ""
@@ -56,7 +81,7 @@ class Kifu {
                     case .White: boardTXT = boardTXT + "O "
                     case .Empty: boardTXT = boardTXT + "- "
                 }
-                count = count + 1
+                count += 1
             }
             boardTXT = boardTXT + "\n"
         }

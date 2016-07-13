@@ -55,6 +55,7 @@ class GameViewController: UIViewController {
             node.removeFromParent()
         }
         presentGameBoard(skView)
+        kifu.resetKifu()
     }
     
     
