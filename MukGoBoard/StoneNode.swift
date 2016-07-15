@@ -11,7 +11,7 @@ import SpriteKit
 
 
 class StoneNode: SKSpriteNode {
-    init(stoneColor: StoneColor, position: CGPoint) {
+    init(stoneColor: StoneColor, position: CGPoint, x: Int, y: Int) {
         var texture: SKTexture?
         
         switch stoneColor {
@@ -20,8 +20,9 @@ class StoneNode: SKSpriteNode {
         }
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture!.size())
-        self.name = "stone"
+        self.name = "stone\(x)x\(y)"
         self.anchorPoint = CGPointMake(0.5, 0.5)
+        self.zPosition = 4
         self.position = position
     }
     

@@ -56,8 +56,23 @@ class GameViewController: UIViewController {
         }
         presentGameBoard(skView)
         kifu.resetKifu()
+        record.resetRecord()
     }
     
+    
+    @IBAction func backMove(sender: AnyObject) {
+        let currentMove = record.backAMove()
+        
+        if currentMove != nil {
+            if let scene = skView.scene as? GameBoardView {
+                scene.removeStone(x: currentMove!.x, y: currentMove!.y)
+            }
+        }
+    }
+    
+    
+    @IBAction func forwardMove(sender: AnyObject) {
+    }
     
     func presentGameBoard(view: SKView) {
         if let scene = GameBoardView(fileNamed:"GameBoardView") {

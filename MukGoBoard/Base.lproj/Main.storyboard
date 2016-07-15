@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
@@ -42,28 +43,54 @@
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxO-4L-4Aj">
-                                <rect key="frame" x="149" y="556" width="76" height="41"/>
+                                <rect key="frame" x="142" y="556" width="90" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="65G-cg-A8u"/>
                                     <constraint firstAttribute="width" constant="76" id="dpc-4C-pfv"/>
+                                    <constraint firstAttribute="width" constant="90" id="xNJ-uV-kUe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Restart"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="65G-cg-A8u"/>
+                                        <exclude reference="dpc-4C-pfv"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="restartGame:" destination="BV1-FR-VrT" eventType="touchUpInside" id="fcH-15-Fi3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTF-b3-hWv">
+                                <rect key="frame" x="36" y="556" width="90" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="sEA-ID-AOl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backMove:" destination="BV1-FR-VrT" eventType="touchUpInside" id="dBv-Kl-uVI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="bTF-b3-hWv" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="20" id="7SV-mR-4b3"/>
+                            <constraint firstItem="bTF-b3-hWv" firstAttribute="top" secondItem="Ta0-hC-DZG" secondAttribute="bottom" constant="35" id="DUr-Ng-eUO"/>
                             <constraint firstItem="aGT-dd-Fmx" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="FtB-Qi-RAb"/>
                             <constraint firstItem="vxO-4L-4Aj" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="KN4-FT-PqR"/>
+                            <constraint firstItem="vxO-4L-4Aj" firstAttribute="leading" secondItem="bTF-b3-hWv" secondAttribute="trailing" constant="25" id="Ppd-vW-hah"/>
                             <constraint firstItem="Ta0-hC-DZG" firstAttribute="top" secondItem="aGT-dd-Fmx" secondAttribute="bottom" constant="50" id="Y47-KC-AAJ"/>
                             <constraint firstItem="vxO-4L-4Aj" firstAttribute="top" secondItem="Ta0-hC-DZG" secondAttribute="bottom" constant="35" id="ZR9-mg-oqk"/>
                             <constraint firstItem="Ta0-hC-DZG" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="iNj-cq-fGr"/>
                             <constraint firstItem="Ta0-hC-DZG" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="oW9-ob-uwh"/>
                             <constraint firstAttribute="trailing" secondItem="Ta0-hC-DZG" secondAttribute="trailing" id="pVI-A3-786"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ppd-vW-hah"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -72,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-104.5" y="266.5"/>
+            <point key="canvasLocation" x="-396.5" y="108.5"/>
         </scene>
     </scenes>
 </document>

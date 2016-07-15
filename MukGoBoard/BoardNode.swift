@@ -80,25 +80,4 @@ class BoardNode: SKSpriteNode {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    func addStone(x x: Int, y: Int, location: CGPoint) {
-        switch stoneColor {
-            case .Black:
-                let stone = StoneNode(stoneColor: .Black, position: location)
-                stone.size = CGSize(width: self.frame.height/20, height: self.frame.width/20)
-                stone.zPosition = 4
-                self.addChild(stone)
-                stoneColor = .White
-                kifu.updateMark(x: x, y: y, mark: .Black)
-                kifu.printKifu()
-            case .White:
-                let stone = StoneNode(stoneColor: .White, position: location)
-                stone.size = CGSize(width: self.frame.height/20, height: self.frame.width/20)
-                stone.zPosition = 5
-                self.addChild(stone)
-                stoneColor = .Black
-                kifu.updateMark(x: x, y: y, mark: .White)
-                kifu.printKifu()
-        }
-    }
 }

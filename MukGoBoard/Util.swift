@@ -16,3 +16,5 @@ enum StoneColor {
 var stoneColor: StoneColor = .Black
 
 var kifu = Kifu()
+
+var record = Record()
