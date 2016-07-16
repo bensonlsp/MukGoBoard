@@ -35,6 +35,7 @@
 		94EC05C31CDA4C7200EFBDFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94EC05C51CDA4C7200EFBDFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4D534DB1D30E02D004A595A /* GameRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRecord.swift; sourceTree = "<group>"; };
+		F4D534DD1D3A351A004A595A /* TestSGFParser.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestSGFParser.playground; sourceTree = "<group>"; };
 		F4E959291D2641CC005449CA /* Kifu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kifu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +82,7 @@
 				94EC05C01CDA4C7200EFBDFE /* Assets.xcassets */,
 				94EC05C21CDA4C7200EFBDFE /* LaunchScreen.storyboard */,
 				94EC05C51CDA4C7200EFBDFE /* Info.plist */,
+				F4D534DD1D3A351A004A595A /* TestSGFParser.playground */,
 			);
 			path = MukGoBoard;
 			sourceTree = "<group>";
