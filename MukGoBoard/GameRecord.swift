@@ -9,11 +9,11 @@
 import Foundation
 
 class Move {
-    let stoneColor: StoneColor
+    let stoneColor: StoneColor?
     let x: Int
     let y: Int
     
-    init(stoneColor: StoneColor, x: Int, y: Int) {
+    init(stoneColor: StoneColor?, x: Int, y: Int) {
         self.stoneColor = stoneColor
         self.x = x
         self.y = y
@@ -22,11 +22,21 @@ class Move {
 
 class SGFNode {
     let move: Move
+    let nodeID: String
     var children: [SGFNode]
     var parent: SGFNode?
     
     init(move: Move) {
         self.move = move
+        
+        var color: String = ""
+        if self.move.stoneColor == .Black {
+            color = "B"
+        } else if self.move.stoneColor == .White {
+            color = "W"
+        }
+    
+        self.nodeID = "\(color)\(move.x)x\(move.y)"
         self.children = []
         self.parent = nil
     }
@@ -51,38 +61,47 @@ class SGFNode {
 
 class Record {
     var sequence: [SGFNode]
-    var currentMove: Int
+    var currentNode: SGFNode
     
     init() {
         self.sequence = []
-        self.currentMove = -1
+        let rootNode = SGFNode(move: Move(stoneColor: nil, x: -1, y: -1))
+        self.sequence.append(rootNode)
+        currentNode = rootNode
     }
     
     func resetRecord() {
-        sequence = []
+        sequence.removeAll()
+        let rootNode = SGFNode(move: Move(stoneColor: nil, x: -1, y: -1))
+        self.sequence.append(rootNode)
+        currentNode = rootNode
     }
     
     func addMove(move: Move) {
-        sequence.append(SGFNode(move: move))
-        currentMove += 1
+        let newNode = SGFNode(move: move)
+        sequence.append(newNode)
+        currentNode.addChildNode(newNode)
+        currentNode = newNode
     }
     
     func backAMove() -> Move? {
-        if record.currentMove >= 0 {
-            let currentMove = sequence[record.currentMove]
-            sequence.removeAtIndex(record.currentMove)
-            record.currentMove -= 1
-            return currentMove.move
+        if currentNode.parent != nil {
+            let oldCurrentNode = currentNode
+            currentNode = currentNode.parent!
+            return oldCurrentNode.move
         } else {
             return nil
         }
     }
     
     func printSequence() {
-        var output: String = ""
         for node in sequence {
-            output += "(\(node.move.x), \(node.move.y), \(node.move.stoneColor)) "
+            print("[\(node.nodeID)]:")
+            if node.children.count > 0 {
+                for child in node.children {
+                    print("    Node Id [\(node.nodeID)] has a child: \(child.nodeID) ")
+                }
+            }
         }
-        print(output)
     }
 }

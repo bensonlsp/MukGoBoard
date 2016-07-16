@@ -21,6 +21,11 @@ for node in nodes2 {
     print(node)
 }
 
+enum StoneColor {
+    case Black
+    case White
+}
+
 class Move {
     let stoneColor: StoneColor
     let x: Int
@@ -35,11 +40,21 @@ class Move {
 
 class SGFNode {
     let move: Move
+    let nodeID: String
     var children: [SGFNode]
     var parent: SGFNode?
     
     init(move: Move) {
         self.move = move
+        
+        var color: String = ""
+        if self.move.stoneColor == .Black {
+            color = "B"
+        } else if self.move.stoneColor == .White {
+            color = "W"
+        }
+        
+        self.nodeID = "\(color)\(move.x)x\(move.y)"
         self.children = []
         self.parent = nil
     }
