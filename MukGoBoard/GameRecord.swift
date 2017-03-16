@@ -30,9 +30,9 @@ class SGFNode {
         self.move = move
         
         var color: String = ""
-        if self.move.stoneColor == .Black {
+        if self.move.stoneColor == .black {
             color = "B"
-        } else if self.move.stoneColor == .White {
+        } else if self.move.stoneColor == .white {
             color = "W"
         }
     
@@ -41,12 +41,12 @@ class SGFNode {
         self.parent = nil
     }
     
-    func addChildNode(node: SGFNode) {
+    func addChildNode(_ node: SGFNode) {
         self.children.append(node)
         node.parent = self
     }
     
-    func findMove(x x: Int, y: Int) -> SGFNode? {
+    func findMove(x: Int, y: Int) -> SGFNode? {
         if (move.x == x && move.y == y) {
             return self
         }
@@ -77,7 +77,7 @@ class Record {
         currentNode = rootNode
     }
     
-    func addMove(move: Move) {
+    func addMove(_ move: Move) {
         let newNode = SGFNode(move: move)
         sequence.append(newNode)
         currentNode.addChildNode(newNode)

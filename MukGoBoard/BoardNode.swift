@@ -11,8 +11,8 @@ import SpriteKit
 
 class BoardNode: SKSpriteNode {
     init(position: CGPoint, size: CGSize) {
-        super.init(texture: nil, color: UIColor.clearColor(), size: size)
-        self.anchorPoint = CGPointMake(0, 0)
+        super.init(texture: nil, color: UIColor.clear, size: size)
+        self.anchorPoint = CGPoint(x: 0, y: 0)
         self.position = position
         self.name = "board"
         
@@ -28,8 +28,8 @@ class BoardNode: SKSpriteNode {
             while (Int(boardWidth) > shiftx) {
                 let backgroundTexture = SKSpriteNode(imageNamed: "board-default")
                 backgroundTextureSize = backgroundTexture.size.width
-                backgroundTexture.anchorPoint = CGPointMake(0, 0)
-                backgroundTexture.position = CGPointMake(CGFloat(shiftx), CGFloat(shifty))
+                backgroundTexture.anchorPoint = CGPoint(x: 0, y: 0)
+                backgroundTexture.position = CGPoint(x: CGFloat(shiftx), y: CGFloat(shifty))
                 backgroundTexture.zPosition = 1
                 self.addChild(backgroundTexture)
                 shiftx += Int(backgroundTextureSize!)
@@ -40,11 +40,12 @@ class BoardNode: SKSpriteNode {
         
         // Draw 19 horizontal lines
         for i in 1...19 {
-            let path: CGMutablePath = CGPathCreateMutable()
-            CGPathMoveToPoint(path, nil, boardWidth/20, boardHeight/20*CGFloat(i))
-            CGPathAddLineToPoint(path, nil, boardWidth-boardWidth/20, boardHeight/20*CGFloat(i))
+            let path: CGMutablePath = CGMutablePath()
+            
+            path.move(to: CGPoint(x: boardWidth/20, y: boardHeight/20*CGFloat(i)))
+            path.addLine(to: CGPoint(x: boardWidth-boardWidth/20, y: boardHeight/20*CGFloat(i)))
             let line = SKShapeNode(path: path)
-            line.strokeColor = SKColor.blackColor()
+            line.strokeColor = SKColor.black
             line.lineWidth = 1
             line.zPosition = 2
             self.addChild(line)
@@ -52,11 +53,11 @@ class BoardNode: SKSpriteNode {
         
         // 19 vertical lines
         for i in 1...19 {
-            let path: CGMutablePath = CGPathCreateMutable()
-            CGPathMoveToPoint(path, nil, boardWidth/20*CGFloat(i), boardHeight/20)
-            CGPathAddLineToPoint(path, nil, boardWidth/20*CGFloat(i), boardHeight-boardHeight/20)
+            let path: CGMutablePath = CGMutablePath()
+            path.move(to: CGPoint(x:boardWidth/20*CGFloat(i), y: boardHeight/20))
+            path.addLine(to: CGPoint(x:boardWidth/20*CGFloat(i), y:boardHeight-boardHeight/20))
             let line = SKShapeNode(path: path)
-            line.strokeColor = SKColor.blackColor()
+            line.strokeColor = SKColor.black
             line.lineWidth = 1
             line.zPosition = 2
             self.addChild(line)
@@ -68,9 +69,9 @@ class BoardNode: SKSpriteNode {
         for x in positionX {
             for y in positionY {
                 let star = SKShapeNode(circleOfRadius: boardWidth/20/5)
-                star.position = CGPointMake(boardWidth/20*x, boardHeight/20*y)
-                star.fillColor = UIColor.blackColor()
-                star.strokeColor = UIColor.blackColor()
+                star.position = CGPoint(x: boardWidth/20*x, y: boardHeight/20*y)
+                star.fillColor = UIColor.black
+                star.strokeColor = UIColor.black
                 star.zPosition = 3
                 self.addChild(star)
             }

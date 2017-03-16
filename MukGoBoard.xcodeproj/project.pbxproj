@@ -36,6 +36,7 @@
 		94EC05C51CDA4C7200EFBDFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4D534DB1D30E02D004A595A /* GameRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRecord.swift; sourceTree = "<group>"; };
 		F4D534DD1D3A351A004A595A /* TestSGFParser.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestSGFParser.playground; sourceTree = "<group>"; };
+		F4D535041D44662E004A595A /* TestGnugo.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestGnugo.playground; sourceTree = "<group>"; };
 		F4E959291D2641CC005449CA /* Kifu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kifu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +84,7 @@
 				94EC05C21CDA4C7200EFBDFE /* LaunchScreen.storyboard */,
 				94EC05C51CDA4C7200EFBDFE /* Info.plist */,
 				F4D534DD1D3A351A004A595A /* TestSGFParser.playground */,
+				F4D535041D44662E004A595A /* TestGnugo.playground */,
 			);
 			path = MukGoBoard;
 			sourceTree = "<group>";
@@ -114,12 +116,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = imukmuk;
 				TargetAttributes = {
 					94EC05B11CDA4C7100EFBDFE = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = DRZ5KM3JY6;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -207,8 +210,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -252,8 +257,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -272,6 +279,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -287,6 +295,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.imukmuk.MukGoBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -301,6 +311,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.imukmuk.MukGoBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -10,21 +10,21 @@ import UIKit
 import SpriteKit
 
 class GameBoardView: SKScene {
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         /* Setup your scene here */
         self.backgroundColor = SKColor(red: 241/255, green: 174/255, blue: 69/255, alpha: 1.0)
-        let board = BoardNode(position: CGPointMake(0, 0), size: self.frame.size)
+        let board = BoardNode(position: CGPoint(x: 0, y: 0), size: self.frame.size)
         self.addChild(board)
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         
         for touch in touches {
-            let location = touch.locationInNode(self)
+            let location = touch.location(in: self)
             let locationTuple = freeLocationToFixedLocation(location)
             // let board = self.childNodeWithName("board") as! BoardNode
-            if (kifu.returnMark(x: locationTuple.x, y: locationTuple.y) == Mark.Empty) {
+            if (kifu.returnMark(x: locationTuple.x, y: locationTuple.y) == Mark.empty) {
                 addStone(x: locationTuple.x, y: locationTuple.y, location: locationTuple.fixedLocation)
             } else {
                 print("Not empty!")
@@ -33,43 +33,43 @@ class GameBoardView: SKScene {
         }
     }
     
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
     }
     
-    func addStone(x x: Int, y: Int, location: CGPoint) {
+    func addStone(x: Int, y: Int, location: CGPoint) {
         switch stoneColor {
-        case .Black:
-            let stone = StoneNode(stoneColor: .Black, position: location, x: x, y: y)
+        case .black:
+            let stone = StoneNode(stoneColor: .black, position: location, x: x, y: y)
             stone.size = CGSize(width: self.frame.height/20, height: self.frame.width/20)
             self.addChild(stone)
-            stoneColor = .White
-            kifu.updateMark(x: x, y: y, mark: .Black)
+            stoneColor = .white
+            kifu.updateMark(x: x, y: y, mark: .black)
             kifu.printKifu()
-            record.addMove(Move(stoneColor: .White, x: x, y: y))
+            record.addMove(Move(stoneColor: .white, x: x, y: y))
             record.printSequence()
-        case .White:
-            let stone = StoneNode(stoneColor: .White, position: location, x: x, y: y)
+        case .white:
+            let stone = StoneNode(stoneColor: .white, position: location, x: x, y: y)
             stone.size = CGSize(width: self.frame.height/20, height: self.frame.width/20)
             self.addChild(stone)
-            stoneColor = .Black
-            kifu.updateMark(x: x, y: y, mark: .White)
+            stoneColor = .black
+            kifu.updateMark(x: x, y: y, mark: .white)
             kifu.printKifu()
-            record.addMove(Move(stoneColor: .Black, x: x, y: y))
+            record.addMove(Move(stoneColor: .black, x: x, y: y))
             record.printSequence()
         }
     }
     
-    func removeStone(x x: Int, y: Int) {
-        if let stone = self.childNodeWithName("stone\(x)x\(y)") {
+    func removeStone(x: Int, y: Int) {
+        if let stone = self.childNode(withName: "stone\(x)x\(y)") {
             stone.removeFromParent()
         }
-        kifu.updateMark(x: x, y: y, mark: .Empty)
+        kifu.updateMark(x: x, y: y, mark: .empty)
         kifu.printKifu()
         record.printSequence()
     }
     
-    func freeLocationToFixedLocation(location: CGPoint) -> (fixedLocation: CGPoint, x: Int, y: Int) {
+    func freeLocationToFixedLocation(_ location: CGPoint) -> (fixedLocation: CGPoint, x: Int, y: Int) {
         let unitWidth = self.size.width/20
         let unitHeight = self.size.height/20
         var shiftx = 0

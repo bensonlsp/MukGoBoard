@@ -9,11 +9,11 @@
 import Foundation
 
 enum StoneColor {
-    case Black
-    case White
+    case black
+    case white
 }
 
-var stoneColor: StoneColor = .Black
+var stoneColor: StoneColor = .black
 
 var kifu = Kifu()
 

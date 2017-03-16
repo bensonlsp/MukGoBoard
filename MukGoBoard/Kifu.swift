@@ -9,12 +9,12 @@
 import Foundation
 
 enum Mark {
-    case Black
-    case White
-    case Empty
-    case Corner
-    case HorizontalEdge
-    case VerticalEdge
+    case black
+    case white
+    case empty
+    case corner
+    case horizontalEdge
+    case verticalEdge
 }
 
 struct Point {
@@ -34,13 +34,13 @@ class Kifu {
             for _ in 0...20 {
                 let markAssigned: Mark
                 if (x==0 && y==0 || x==0 && y==20 || x==20 && y==0 || x==20 && y==20) {
-                    markAssigned = .Corner
+                    markAssigned = .corner
                 } else if (x==0 || x==20) {
-                    markAssigned = .VerticalEdge
+                    markAssigned = .verticalEdge
                 } else if (y==0 || y==20) {
-                    markAssigned = .HorizontalEdge
+                    markAssigned = .horizontalEdge
                 } else {
-                    markAssigned = .Empty
+                    markAssigned = .empty
                 }
                 
                 self.map.append(Point(x: x, y: y, mark: markAssigned))
@@ -59,13 +59,13 @@ class Kifu {
             for _ in 0...20 {
                 let markAssigned: Mark
                 if (x==0 && y==0 || x==0 && y==20 || x==20 && y==0 || x==20 && y==20) {
-                    markAssigned = .Corner
+                    markAssigned = .corner
                 } else if (x==0 || x==20) {
-                    markAssigned = .VerticalEdge
+                    markAssigned = .verticalEdge
                 } else if (y==0 || y==20) {
-                    markAssigned = .HorizontalEdge
+                    markAssigned = .horizontalEdge
                 } else {
-                    markAssigned = .Empty
+                    markAssigned = .empty
                 }
                 
                 
@@ -78,7 +78,7 @@ class Kifu {
         }
     }
     
-    func updateMark(x x: Int, y: Int, mark: Mark) {
+    func updateMark(x: Int, y: Int, mark: Mark) {
         for count in 0..<map.count {
             if (x == map[count].x && y == map[count].y) {
                 map[count].mark = mark
@@ -86,14 +86,14 @@ class Kifu {
         }
     }
     
-    func returnMark(x x: Int, y: Int) -> Mark {
+    func returnMark(x: Int, y: Int) -> Mark {
         for count in 0..<map.count {
             if (x == map[count].x && y == map[count].y) {
                 return map[count].mark
             }
         }
         
-        return Mark.Empty
+        return Mark.empty
     }
     
     func printKifu() {
@@ -102,12 +102,12 @@ class Kifu {
         for _ in 0...20 {
             for _ in 0...20 {
                 switch map[count].mark {
-                    case .Black: boardTXT += "X "
-                    case .White: boardTXT += "O "
-                    case .Empty: boardTXT += ". "
-                    case .Corner: boardTXT += "+ "
-                    case .HorizontalEdge: boardTXT += "- "
-                    case .VerticalEdge: boardTXT += "| "
+                    case .black: boardTXT += "X "
+                    case .white: boardTXT += "O "
+                    case .empty: boardTXT += ". "
+                    case .corner: boardTXT += "+ "
+                    case .horizontalEdge: boardTXT += "- "
+                    case .verticalEdge: boardTXT += "| "
                 }
                 count += 1
             }

@@ -26,17 +26,21 @@ class GameViewController: UIViewController {
         
         // Present a game board to skView
         presentGameBoard(skView)
+        
+        print("Hello World")
+        
+        
     }
 
-    override func shouldAutorotate() -> Bool {
+    override var shouldAutorotate : Bool {
         return true
     }
 
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return .AllButUpsideDown
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return .allButUpsideDown
         } else {
-            return .All
+            return .all
         }
     }
 
@@ -45,12 +49,12 @@ class GameViewController: UIViewController {
         // Release any cached data, images, etc that aren't in use.
     }
 
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
     
     
-    @IBAction func restartGame(sender: AnyObject) {
+    @IBAction func restartGame(_ sender: AnyObject) {
         for node:SKNode in skView.scene!.children {
             node.removeFromParent()
         }
@@ -60,7 +64,7 @@ class GameViewController: UIViewController {
     }
     
     
-    @IBAction func backMove(sender: AnyObject) {
+    @IBAction func backMove(_ sender: AnyObject) {
         let currentMove = record.backAMove()
         
         if currentMove != nil {
@@ -71,14 +75,14 @@ class GameViewController: UIViewController {
     }
     
     
-    @IBAction func forwardMove(sender: AnyObject) {
+    @IBAction func forwardMove(_ sender: AnyObject) {
     }
     
-    func presentGameBoard(view: SKView) {
+    func presentGameBoard(_ view: SKView) {
         if let scene = GameBoardView(fileNamed:"GameBoardView") {
             /* Set the scale mode to scale to fit the window */
             scene.size = view.bounds.size
-            scene.scaleMode = .AspectFill
+            scene.scaleMode = .aspectFill
             
             view.presentScene(scene)
         }

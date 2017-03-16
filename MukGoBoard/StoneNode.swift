@@ -15,13 +15,13 @@ class StoneNode: SKSpriteNode {
         var texture: SKTexture?
         
         switch stoneColor {
-            case .Black: texture = SKTexture(imageNamed: "black")
-            case .White: texture = SKTexture(imageNamed: "white")
+            case .black: texture = SKTexture(imageNamed: "black")
+            case .white: texture = SKTexture(imageNamed: "white")
         }
         
-        super.init(texture: texture, color: UIColor.clearColor(), size: texture!.size())
+        super.init(texture: texture, color: UIColor.clear, size: texture!.size())
         self.name = "stone\(x)x\(y)"
-        self.anchorPoint = CGPointMake(0.5, 0.5)
+        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.zPosition = 4
         self.position = position
     }
